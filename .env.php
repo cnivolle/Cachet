@@ -1,6 +1,6 @@
 <?php
 
-$dbURL = parse_url(getenv('DATABASE_URL'));
+$dbURL = parse_url(getenv('POSTGRESQL_ADDON_URI'));
 $dbName = substr($dbURL["path"], 1);
 
 return [
