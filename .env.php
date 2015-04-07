@@ -1,14 +1,10 @@
 <?php
 
-$dbURL = parse_url(getenv('POSTGRESQL_ADDON_URI'));
-$dbName = substr($dbURL["path"], 1);
-
 return [
-    'APP_DEBUG'    => getenv('APP_DEBUG') ?: false,
-    'DB_HOST'      => $dbURL['host'],
-    'DB_DATABASE'  => $dbName,
-    'DB_USERNAME'  => $dbURL['user'],
-    'DB_PASSWORD'  => $dbURL['pass'],
-    'DB_DRIVER'    => 'pgsql',
+    'DB_DRIVER'   => 'pgsql',
+    'DB_HOST'     => getenv('POSTGRESQL_ADDON_HOST'),
+    'DB_DATABASE' => getenv('POSTGRESQL_ADDON_DB'),
+    'DB_USERNAME' => getenv('POSTGRESQL_ADDON_USER'),
+    'DB_PASSWORD' => getenv('POSTGRESQL_ADDON_PASSWORD'),
     'CACHE_DRIVER' => 'apc',
 ];
