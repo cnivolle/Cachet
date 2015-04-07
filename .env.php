@@ -6,5 +6,4 @@ return [
     'DB_DATABASE' => getenv('POSTGRESQL_ADDON_DB'),
     'DB_USERNAME' => getenv('POSTGRESQL_ADDON_USER'),
     'DB_PASSWORD' => getenv('POSTGRESQL_ADDON_PASSWORD'),
-    'CACHE_DRIVER' => 'apc',
 ];
