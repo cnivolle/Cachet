@@ -16,7 +16,7 @@
     ],
     "env": {
         "ENV": {
-            "value": "heroku",
+            "value": "production",
             "description": "Warning: Do not modify this value on Heroku deployments."
         },
         "BUILDPACK_URL": {
@@ -29,6 +29,6 @@
         }
     },
     "scripts": {
-        "postdeploy": "php artisan migrate --env=heroku; php artisan key:generate;"
+        "postdeploy": "php artisan migrate --env=production; php artisan key:generate;"
     }
 }
